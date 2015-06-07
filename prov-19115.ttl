@@ -1,0 +1,62 @@
+# baseURI: http://registry.it.csiro.au/ont/prov-19115
+# imports: http://def.seegrid.csiro.au/isotc211/iso19115/-2/2009/imagery
+# imports: http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation
+# imports: http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling
+# imports: http://www.w3.org/ns/prov
+
+@prefix ci: <http://def.seegrid.csiro.au/isotc211/iso19115/2003/citation#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix le: <http://def.seegrid.csiro.au/isotc211/iso19115/-2/2009/lineage#> .
+@prefix li: <http://def.seegrid.csiro.au/isotc211/iso19115/2003/lineage#> .
+@prefix md: <http://def.seegrid.csiro.au/isotc211/iso19115/2003/metadata#> .
+@prefix mi: <http://def.seegrid.csiro.au/isotc211/iso19115/-2/2009/imagery#> .
+@prefix om: <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix prov-19115: <http://registry.it.csiro.au/ont/prov-19115#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mi:Event
+  rdfs:subClassOf prov:Activity ;
+.
+mi:Instrument
+  rdfs:subClassOf om:Process ;
+  rdfs:subClassOf prov:Plan ;
+.
+le:Algorithm
+  rdfs:subClassOf om:Process ;
+  rdfs:subClassOf prov:Plan ;
+.
+le:Processing
+  rdfs:subClassOf prov:Usage ;
+.
+ci:ResponsibleParty
+  rdfs:subClassOf prov:Agent ;
+  rdfs:subClassOf prov:Entity ;
+.
+li:ProcessStep
+  rdfs:subClassOf prov:Activity ;
+.
+om:Observation
+  rdfs:subClassOf prov:Activity ;
+.
+om:Process
+  rdfs:subClassOf prov:Agent ;
+  rdfs:subClassOf prov:Plan ;
+.
+<http://registry.it.csiro.au/ont/prov-19115>
+  rdf:type owl:Ontology ;
+  dc:creator "Simon J D Cox"^^xsd:string ;
+  dct:created "2015-06-07"^^xsd:string ;
+  dct:creator <http://orcid.org/0000-0002-3884-3420> ;
+  dct:title "A provisional alignment of some elements ot ISO 19115(-2) metadata with W3C PROV-O"^^xsd:string ;
+  rdfs:comment "Prepared for the initial meeting of the Project Team for the revision of  ISO 19115-2"^^xsd:string ;
+  rdfs:label "A provisional alignment of some elements ot ISO 19115(-2) metadata with W3C PROV-O"^^xsd:string ;
+  owl:imports <http://def.seegrid.csiro.au/isotc211/iso19115/-2/2009/imagery> ;
+  owl:imports <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation> ;
+  owl:imports <http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling> ;
+  owl:imports <http://www.w3.org/ns/prov> ;
+.
